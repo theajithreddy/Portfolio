@@ -7,12 +7,21 @@
 //   so confirm each one in your Razorpay dashboard.
 //
 // If both are set, the Payment Page link wins.
-export const payment = {
-  paymentPageUrl: '',
+export const payment: {
+  paymentPageUrl: string
+  keyId: string
+  qrImage: string
+  businessName: string
+  description: string
+  themeColor: string
+} = {
+  paymentPageUrl: 'https://razorpay.me/@ajithreddy',
   keyId: '',
+  // Razorpay UPI QR, served from public/assets. Empty string hides it.
+  qrImage: 'assets/payment-qr.png',
   businessName: 'Ajith Reddy',
   description: 'Project advance / milestone payment',
   themeColor: '#10b981',
-} as const
+}
 
 export const isPaymentConfigured = payment.paymentPageUrl !== '' || payment.keyId !== ''

@@ -89,7 +89,7 @@ export function PaymentProvider({ children }: { children: ReactNode }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="pay-title"
-            className="glass relative w-full max-w-md bg-[#0a0a0c] p-6"
+            className="glass relative max-h-[92vh] w-full max-w-md overflow-y-auto bg-[#0a0a0c] p-6"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -112,14 +112,29 @@ export function PaymentProvider({ children }: { children: ReactNode }) {
                 Payment submitted. Thank you! I&apos;ll confirm it and be in touch shortly.
               </p>
             ) : payment.paymentPageUrl ? (
-              <a
-                href={payment.paymentPageUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-3 text-sm font-semibold text-zinc-950"
-              >
-                <Lock size={16} /> Continue to secure checkout
-              </a>
+              <div className="mt-6">
+                <a
+                  href={payment.paymentPageUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-6 py-3 text-sm font-semibold text-zinc-950"
+                >
+                  <Lock size={16} /> Continue to secure checkout
+                </a>
+                {payment.qrImage && (
+                  <figure className="mt-5 text-center">
+                    <img
+                      src={`${import.meta.env.BASE_URL}${payment.qrImage}`}
+                      alt="Razorpay UPI QR code for Ajith Reddy"
+                      width={474}
+                      height={622}
+                      loading="lazy"
+                      className="mx-auto max-h-64 w-auto rounded-xl"
+                    />
+                    <figcaption className="mt-2 text-xs text-zinc-500">Or scan with any UPI app</figcaption>
+                  </figure>
+                )}
+              </div>
             ) : payment.keyId ? (
               <div className="mt-6 space-y-3">
                 <label className="block text-sm text-zinc-300">
