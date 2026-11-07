@@ -104,7 +104,7 @@ export function PaymentProvider({ children }: { children: ReactNode }) {
               <CreditCard className="text-emerald-400" size={20} /> Make a payment
             </h2>
             <p className="mt-2 text-sm text-zinc-400">
-              Pay advances, retainers or milestone fees securely through Razorpay with UPI, NetBanking or card.
+              Pay advances, retainers or milestone fees securely with UPI, NetBanking or card.
             </p>
 
             {status === 'paid' ? (
@@ -125,7 +125,7 @@ export function PaymentProvider({ children }: { children: ReactNode }) {
                   <figure className="mt-5 text-center">
                     <img
                       src={`${import.meta.env.BASE_URL}${payment.qrImage}`}
-                      alt="Razorpay UPI QR code for Ajith Reddy"
+                      alt="UPI QR code to pay Ajith Reddy"
                       width={474}
                       height={622}
                       loading="lazy"
@@ -177,7 +177,7 @@ export function PaymentProvider({ children }: { children: ReactNode }) {
               </a>
             )}
             <p className="mt-4 flex items-center gap-1.5 text-xs text-zinc-500">
-              <Lock size={12} /> Processed by Razorpay. Card and UPI details never touch this site.
+              <Lock size={12} /> Secure checkout. Your card and UPI details are never stored on this site.
               {!isPaymentConfigured && ' Online payments are being set up.'}
             </p>
           </div>

@@ -6,7 +6,15 @@ export default function ProjectCard({ p }: { p: Project }) {
   return (
         <TiltCard className="glass group h-full">
           <a href={p.url} target="_blank" rel="noopener noreferrer" className="flex h-full flex-col p-6">
-            <div className={`card-visual card-visual-${p.accent}`} aria-hidden />
+            <img
+              src={`${import.meta.env.BASE_URL}assets/previews/${p.id}.jpg`}
+              alt={`${p.name} website preview`}
+              width={800}
+              height={327}
+              loading="lazy"
+              decoding="async"
+              className="aspect-[800/327] w-full rounded-xl border border-zinc-800 bg-zinc-900 object-cover object-top"
+            />
             <div className="mt-5 flex flex-wrap items-center gap-2 text-xs">
               <span className="rounded-full bg-white/5 px-3 py-1 text-zinc-300">{p.industry}</span>
               <span
@@ -31,7 +39,7 @@ export default function ProjectCard({ p }: { p: Project }) {
               ))}
             </ul>
             <ul className="mt-5 flex flex-wrap gap-2">
-              {p.stack.map((t) => (
+              {p.tags.map((t) => (
                 <li key={t} className="rounded-full border border-zinc-700 px-3 py-1 text-xs text-zinc-300">
                   {t}
                 </li>

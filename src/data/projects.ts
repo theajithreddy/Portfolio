@@ -10,7 +10,7 @@ export interface Project {
   variant: Variant
   url: string
   features: string[]
-  stack: string[]
+  tags: string[]
   accent: 'emerald' | 'cyan'
 }
 
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     industry: 'Healthcare & Aesthetics',
     business: 'Aesthetic Dermatology',
     name: 'NeoSkin Kokapet',
-    description: 'Clinic platform rebuilt in Next.js with local SEO for Kokapet & Financial District.',
+    description: 'Clinic platform rebuilt for speed, with local SEO for Kokapet & Financial District.',
     variant: 'Live Site',
     url: 'https://neoskinkokapet.com/',
     features: [
@@ -30,7 +30,7 @@ export const projects: Project[] = [
       'Direct WhatsApp appointment routing',
       'Local SEO for Kokapet & Financial District',
     ],
-    stack: ['Next.js', 'Tailwind CSS', 'Local Lead Funnel'],
+    tags: ['Local Lead Funnel', 'Local SEO', 'WhatsApp Booking'],
     accent: 'emerald',
   },
   {
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     variant: 'Live Site',
     url: 'https://christhujyothihospitals.com/',
     features: ['Patient trust architecture', 'Rapid specialist appointment booking', 'Emergency call routing'],
-    stack: ['Healthcare', 'Conversion Architecture', 'Speed'],
+    tags: ['Healthcare', 'Conversion Architecture', 'Speed'],
     accent: 'emerald',
   },
   {
@@ -50,15 +50,15 @@ export const projects: Project[] = [
     industry: 'Retail & E-Commerce',
     business: 'Fashion E-Commerce',
     name: 'Bhargavi Store',
-    description: '3D WebGL e-commerce concept with an interactive product visualizer.',
+    description: 'Interactive 3D e-commerce concept with a hands-on product visualizer.',
     variant: 'Interactive 3D Demo',
     url: 'https://bhargavi-store.onrender.com/',
     features: [
-      'Three.js / WebGL product visualizer',
+      'Interactive 3D product visualizer',
       'Instant slide-out bag drawer',
-      '272 kB initial JS bundle',
+      'Fast-loading storefront',
     ],
-    stack: ['React', 'Three.js', 'GSAP', 'E-Commerce'],
+    tags: ['E-Commerce', '3D Product View', 'Smooth Motion'],
     accent: 'cyan',
   },
   {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     variant: 'Live Site',
     url: 'https://mnconsultants.in/',
     features: ['Authority positioning', 'Clear service taxonomy', 'Structured B2B inquiry funnels'],
-    stack: ['B2B', 'Corporate Web', 'Lead Generation'],
+    tags: ['B2B', 'Corporate Web', 'Lead Generation'],
     accent: 'cyan',
   },
 ]
@@ -81,6 +81,6 @@ export const clientIndustries = industries.filter((i) => clientProjects.some((p)
 
 // Empty slots for upcoming 3D concept demos.
 export const demoSlots = [
-  { id: 'slot-1', title: 'Next concept demo', note: '3D WebGL prototype in progress' },
+  { id: 'slot-1', title: 'Next concept demo', note: '3D concept in progress' },
   { id: 'slot-2', title: 'Next concept demo', note: 'Coming soon' },
 ]

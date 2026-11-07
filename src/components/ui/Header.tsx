@@ -64,7 +64,7 @@ export default function Header() {
             onClick={openPayment}
             className="hidden items-center gap-2 rounded-full border border-emerald-500/40 bg-white/5 px-4 py-2 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/10 sm:inline-flex"
           >
-            <CreditCard size={16} /> Pay Advance
+            <CreditCard size={16} /> Make Payment
           </button>
           <a
             href={waHref}
@@ -107,7 +107,7 @@ export default function Header() {
               }}
               className="col-span-2 inline-flex items-center justify-center gap-2 rounded-full border border-emerald-500/40 bg-white/5 px-4 py-3 text-sm font-semibold text-emerald-300"
             >
-              <CreditCard size={16} /> Pay Advance
+              <CreditCard size={16} /> Make Payment
             </button>
             <a
               href={waHref}

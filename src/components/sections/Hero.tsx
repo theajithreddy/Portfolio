@@ -22,12 +22,12 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0a0c]" />
 
       <div className="relative mx-auto w-full max-w-6xl px-5 pt-24 pb-16">
-        <p data-reveal className="mb-4 text-xs font-medium tracking-[0.25em] text-emerald-400 uppercase">
+        <p data-reveal className="mb-4 text-xs font-medium tracking-[0.25em] text-slate-400 uppercase">
           {contact.location}
         </p>
         <h1 data-reveal className="max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight sm:text-7xl">
           {contact.name}
-          <span className="mt-2 block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent text-3xl sm:text-5xl">
+          <span className="mt-2 block text-3xl font-semibold text-slate-200 sm:text-5xl">
             Digital Strategist &amp; Interactive Web Designer
           </span>
         </h1>

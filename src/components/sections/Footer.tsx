@@ -23,7 +23,7 @@ export default function Footer() {
             <Phone size={16} /> {contact.phoneDisplay}
           </a>
           <button type="button" onClick={openPayment} className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 px-4 py-2 font-semibold text-emerald-300 hover:bg-emerald-500/10">
-            <CreditCard size={16} /> Pay Invoice
+            <CreditCard size={16} /> Make Payment
           </button>
           {socials.map(([label, href]) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">

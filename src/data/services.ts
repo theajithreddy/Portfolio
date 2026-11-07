@@ -8,7 +8,7 @@ export const tiers: Tier[] = [
   {
     id: 'landing',
     name: 'High-Converting Landing Page',
-    blurb: 'Fast-turnaround ad landing page + Meta Pixel / GA4 + WhatsApp lead capture.',
+    blurb: 'Fast-turnaround ad landing page with conversion tracking and WhatsApp lead capture.',
   },
   {
     id: 'business',
@@ -25,7 +25,7 @@ export const tiers: Tier[] = [
 export const addons = [
   { id: 'gbp', name: 'Google Business Profile / Local SEO' },
   { id: 'wa', name: 'WhatsApp Lead Automation' },
-  { id: 'ads', name: 'Meta / Google Ad Setup' },
+  { id: 'ads', name: 'Ad Campaign Setup' },
   { id: 'copy', name: 'Copywriting' },
 ]
 
@@ -36,7 +36,7 @@ export const pillars = [
   },
   {
     title: 'Engineering that is fast',
-    text: 'React, Next.js and WebGL tuned for mid-range phones, with graceful 2D fallbacks.',
+    text: 'Fast, modern builds tuned for mid-range phones, so pages load quickly everywhere.',
   },
   {
     title: 'Lead capture that closes',
