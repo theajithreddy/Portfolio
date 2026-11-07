@@ -1,13 +1,14 @@
-// Drop production values in here. Everything in the site reads from this file.
+// Everything in the site reads contact details from this file.
 export const contact = {
   name: 'Ajith Reddy',
-  // Digits only, with country code, no "+" (e.g. "919876543210").
-  whatsappNumber: '91XXXXXXXXXX',
-  // Shown on the page and used for tel: links.
-  phoneDisplay: '+91 XXXXX XXXXX',
-  phoneTel: '+91XXXXXXXXXX',
-  email: 'hello@example.com',
+  // Digits only, with country code, no "+".
+  whatsappNumber: '919182330659',
+  phoneDisplay: '+91 91823 30659',
+  phoneTel: '+919182330659',
   github: 'https://github.com/theajithreddy',
+  instagram: 'https://instagram.com/theajithreddy',
+  facebook: 'https://facebook.com/theajithreddy',
+  x: 'https://x.com/theajithreddy_',
   location: 'Warangal & Hyderabad',
 } as const
 
