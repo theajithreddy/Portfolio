@@ -28,7 +28,7 @@ export default function Hero() {
         <h1 data-reveal className="max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight sm:text-7xl">
           {contact.name}
           <span className="mt-2 block text-3xl font-semibold text-slate-200 sm:text-5xl">
-            Digital Strategist &amp; Interactive Web Designer
+            Digital Marketing Strategist &amp; Interactive Web Designer
           </span>
         </h1>
         <p data-reveal className="mt-6 max-w-2xl text-lg text-zinc-300">

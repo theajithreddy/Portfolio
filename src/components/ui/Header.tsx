@@ -46,7 +46,7 @@ export default function Header() {
           />
           <span className="flex min-w-0 flex-col leading-tight">
             <span className="truncate font-semibold tracking-tight">Ajith Reddy</span>
-            <span className="truncate text-xs text-zinc-400">Digital Strategist</span>
+            <span className="truncate text-xs text-zinc-400">Digital Marketing Strategist</span>
           </span>
         </a>
 
