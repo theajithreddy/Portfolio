@@ -15,7 +15,7 @@ export default function ProjectEstimator() {
   const message = [
     `Hi ${contact.name}, ${name ? `I'm ${name}. ` : ''}I'd like a quote.`,
     '',
-    `Package: ${tier.name} (${tier.price})`,
+    `Package: ${tier.name}`,
     `Add-ons: ${picked.length ? addons.filter((a) => picked.includes(a.id)).map((a) => a.name).join(', ') : 'None'}`,
     '',
     'Please share the next steps.',
@@ -23,8 +23,8 @@ export default function ProjectEstimator() {
 
   return (
     <section id="estimator" className="mx-auto max-w-4xl scroll-mt-16 px-4 sm:px-5 py-24">
-      <p data-reveal className="text-xs tracking-[0.25em] text-emerald-400 uppercase">Project estimator</p>
-      <h2 data-reveal className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Get a ballpark in 30 seconds</h2>
+      <p data-reveal className="text-xs tracking-[0.25em] text-emerald-400 uppercase">Project scope</p>
+      <h2 data-reveal className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Tell me what you need</h2>
 
       <div data-reveal className="glass mt-10 p-6 sm:p-8">
         <fieldset>
@@ -45,7 +45,6 @@ export default function ProjectEstimator() {
                   onChange={() => setTierId(t.id)}
                 />
                 <span className="block text-sm font-semibold">{t.name}</span>
-                <span className="mt-1 block text-xs text-emerald-400">{t.price}</span>
               </label>
             ))}
           </div>
@@ -79,8 +78,7 @@ export default function ProjectEstimator() {
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
           <p className="text-sm text-zinc-400">
-            Estimate: <span className="font-semibold text-emerald-400">{tier.price}</span>
-            {picked.length > 0 && ' + add-ons quoted on scope'}
+            {tier.name}{picked.length > 0 ? ` + ${picked.length} add-on${picked.length > 1 ? 's' : ''}` : ''}. I'll reply with a scoped quote.
           </p>
           <a
             href={waLink(message)}

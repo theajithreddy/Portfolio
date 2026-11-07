@@ -14,7 +14,7 @@ body {
   background: #0a0a0c;
   overflow-x: hidden;
   color: #e8eaf0;
-  font-family: 'Inter', 'Noto Sans Telugu', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 .glass {

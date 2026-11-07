@@ -1,5 +1,6 @@
-import { Phone } from 'lucide-react'
+import { CreditCard, Phone } from 'lucide-react'
 import { contact, telLink } from '../../data/contact'
+import { usePayment } from '../ui/PaymentModal'
 
 const socials = [
   ['GitHub', contact.github],
@@ -9,6 +10,7 @@ const socials = [
 ] as const
 
 export default function Footer() {
+  const openPayment = usePayment()
   return (
     <footer className="border-t border-zinc-800 py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 sm:flex-row sm:items-center sm:justify-between">
@@ -20,6 +22,9 @@ export default function Footer() {
           <a href={telLink} className="inline-flex items-center gap-2 hover:text-emerald-400">
             <Phone size={16} /> {contact.phoneDisplay}
           </a>
+          <button type="button" onClick={openPayment} className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 px-4 py-2 font-semibold text-emerald-300 hover:bg-emerald-500/10">
+            <CreditCard size={16} /> Pay Invoice
+          </button>
           {socials.map(([label, href]) => (
             <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400">
               {label}

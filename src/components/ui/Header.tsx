@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
-import { Menu, MessageCircle, Phone, X } from 'lucide-react'
+import { CreditCard, Menu, MessageCircle, Phone, X } from 'lucide-react'
 import { contact, telLink, waLink } from '../../data/contact'
+import { usePayment } from './PaymentModal'
 
 const links = [
-  ['Overview', '#overview'],
-  ['Work', '#work'],
-  ['Services', '#services'],
-  ['Estimator', '#estimator'],
+  ["Client Work", "#work"],
+  ["Interactive Demos", "#demos"],
+  ["Services", "#services"],
+  ["Project Scope", "#estimator"],
 ] as const
 
 const avatar = `${import.meta.env.BASE_URL}assets/ajith-reddy.jpeg`
@@ -23,6 +24,7 @@ function PulseDot() {
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const openPayment = usePayment()
 
   useEffect(() => {
     if (!open) return
@@ -48,7 +50,7 @@ export default function Header() {
           </span>
         </a>
 
-        <ul className="hidden items-center gap-7 text-sm text-zinc-300 md:flex">
+        <ul className="hidden items-center gap-6 text-sm text-zinc-300 lg:flex">
           {links.map(([label, href]) => (
             <li key={href}>
               <a href={href} className="transition hover:text-emerald-400">{label}</a>
@@ -57,17 +59,24 @@ export default function Header() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={openPayment}
+            className="hidden items-center gap-2 rounded-full border border-emerald-500/40 bg-white/5 px-4 py-2 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500/10 sm:inline-flex"
+          >
+            <CreditCard size={16} /> Pay Advance
+          </button>
           <a
             href={waHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-2 text-sm font-semibold text-zinc-950 shadow-[0_0_24px_-6px_rgba(16,185,129,.7)] transition hover:-translate-y-0.5 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 px-4 py-2 text-sm font-semibold text-zinc-950 shadow-[0_0_24px_-6px_rgba(16,185,129,.7)] transition hover:-translate-y-0.5 lg:inline-flex"
           >
             <PulseDot /> Message on WhatsApp
           </a>
           <button
             type="button"
-            className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-white/5 lg:hidden"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -79,7 +88,7 @@ export default function Header() {
       </nav>
 
       {open && (
-        <div id="mobile-menu" className="border-t border-white/5 bg-[#0a0a0c]/95 px-4 pb-5 backdrop-blur-xl md:hidden">
+        <div id="mobile-menu" className="border-t border-white/5 bg-[#0a0a0c]/95 px-4 pb-5 backdrop-blur-xl lg:hidden">
           <ul className="flex flex-col py-2">
             {links.map(([label, href]) => (
               <li key={href}>
@@ -90,6 +99,16 @@ export default function Header() {
             ))}
           </ul>
           <div className="grid grid-cols-2 gap-3">
+            <button
+              type="button"
+              onClick={() => {
+                setOpen(false)
+                openPayment()
+              }}
+              className="col-span-2 inline-flex items-center justify-center gap-2 rounded-full border border-emerald-500/40 bg-white/5 px-4 py-3 text-sm font-semibold text-emerald-300"
+            >
+              <CreditCard size={16} /> Pay Advance
+            </button>
             <a
               href={waHref}
               target="_blank"

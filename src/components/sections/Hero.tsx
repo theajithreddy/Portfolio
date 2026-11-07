@@ -39,9 +39,6 @@ export default function Hero() {
           interactive 3D web experiences, friction-free landing pages, and automated local lead capture funnels that
           turn visitors into paying customers.
         </p>
-        <p data-reveal lang="te" className="mt-4 text-emerald-300/90">
-          మీ బిజినెస్ కోసం హై-కన్వర్షన్ వెబ్‌సైట్ కావాలా? Let&apos;s talk.
-        </p>
         <div data-reveal className="mt-8 flex flex-wrap gap-3">
           <Button
             href={waLink("Hi Ajith, I'd like a high-converting website for my business. Let's talk.")}

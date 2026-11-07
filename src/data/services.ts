@@ -2,7 +2,6 @@ export interface Tier {
   id: string
   name: string
   blurb: string
-  price: string
 }
 
 export const tiers: Tier[] = [
@@ -10,19 +9,16 @@ export const tiers: Tier[] = [
     id: 'landing',
     name: 'High-Converting Landing Page',
     blurb: 'Fast-turnaround ad landing page + Meta Pixel / GA4 + WhatsApp lead capture.',
-    price: 'Starts from ₹7,000',
   },
   {
     id: 'business',
     name: 'Interactive Business Website',
     blurb: 'Multi-page custom design + 3D interactive touches + SEO structure.',
-    price: 'Starts from ₹15,000',
   },
   {
     id: 'funnel',
     name: 'E-Commerce & Full Lead Funnel',
     blurb: 'Custom shop / lead engine + payment integration + CRM / automation.',
-    price: 'Custom Scope',
   },
 ]
 
