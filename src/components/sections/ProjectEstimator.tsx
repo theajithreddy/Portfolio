@@ -22,7 +22,7 @@ export default function ProjectEstimator() {
   ].join('\n')
 
   return (
-    <section id="estimate" className="mx-auto max-w-4xl px-5 py-24">
+    <section id="estimator" className="mx-auto max-w-4xl scroll-mt-16 px-4 sm:px-5 py-24">
       <p data-reveal className="text-xs tracking-[0.25em] text-emerald-400 uppercase">Project estimator</p>
       <h2 data-reveal className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Get a ballpark in 30 seconds</h2>
 

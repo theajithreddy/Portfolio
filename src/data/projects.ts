@@ -1,52 +1,76 @@
+export type Industry = 'Healthcare & Aesthetics' | 'Retail & E-Commerce' | 'B2B & Advisory'
+export type Variant = 'Live Site' | 'Interactive 3D Demo'
+
 export interface Project {
   id: string
+  industry: Industry
+  business: string // business category, level 2 of the taxonomy
   name: string
+  description: string
+  variant: Variant
   url: string
-  type: string
-  focus: string
-  tags: string[]
+  features: string[]
+  stack: string[]
   accent: 'emerald' | 'cyan'
 }
+
+export const industries: Industry[] = ['Healthcare & Aesthetics', 'Retail & E-Commerce', 'B2B & Advisory']
 
 export const projects: Project[] = [
   {
     id: 'neoskin',
+    industry: 'Healthcare & Aesthetics',
+    business: 'Aesthetic Dermatology',
     name: 'NeoSkin Kokapet',
+    description: 'Clinic platform rebuilt in Next.js with local SEO for Kokapet & Financial District.',
+    variant: 'Live Site',
     url: 'https://neoskinkokapet.com/',
-    type: 'Aesthetic Dermatology & Clinic Platform',
-    focus:
-      'Full Next.js rebuild with local SEO for Kokapet & Financial District, compliant lead capture (DPDP & NMC aligned, no unverified medical claims) and direct WhatsApp appointment routing.',
-    tags: ['Next.js', 'Tailwind CSS', 'Local Lead Funnel'],
+    features: [
+      'DPDP & NMC aligned lead capture, no unverified medical claims',
+      'Direct WhatsApp appointment routing',
+      'Local SEO for Kokapet & Financial District',
+    ],
+    stack: ['Next.js', 'Tailwind CSS', 'Local Lead Funnel'],
+    accent: 'emerald',
+  },
+  {
+    id: 'christhu',
+    industry: 'Healthcare & Aesthetics',
+    business: 'Multi-Specialty Hospital',
+    name: 'Christhu Jyothi Hospitals',
+    description: 'Multi-specialty healthcare platform built around patient trust and speed.',
+    variant: 'Live Site',
+    url: 'https://christhujyothihospitals.com/',
+    features: ['Patient trust architecture', 'Rapid specialist appointment booking', 'Emergency call routing'],
+    stack: ['Healthcare', 'Conversion Architecture', 'Speed'],
     accent: 'emerald',
   },
   {
     id: 'bhargavi',
-    name: 'Bhargavi Store Concept',
+    industry: 'Retail & E-Commerce',
+    business: 'Fashion E-Commerce',
+    name: 'Bhargavi Store',
+    description: '3D WebGL e-commerce concept with an interactive product visualizer.',
+    variant: 'Interactive 3D Demo',
     url: 'https://bhargavi-store.onrender.com/',
-    type: '3D Modern E-Commerce Demo',
-    focus:
-      'Three.js / WebGL interactive product visualizer, fluid GSAP motion, an instant slide-out bag drawer and an optimized 272 kB initial JS bundle.',
-    tags: ['React', 'Three.js', 'GSAP', 'E-Commerce'],
+    features: [
+      'Three.js / WebGL product visualizer',
+      'Instant slide-out bag drawer',
+      '272 kB initial JS bundle',
+    ],
+    stack: ['React', 'Three.js', 'GSAP', 'E-Commerce'],
     accent: 'cyan',
   },
   {
-    id: 'christhu',
-    name: 'Christhu Jyothi Hospitals',
-    url: 'https://christhujyothihospitals.com/',
-    type: 'Multi-Specialty Healthcare Platform',
-    focus:
-      'Patient trust architecture, rapid specialist appointment booking and emergency call routing.',
-    tags: ['Healthcare', 'Conversion Architecture', 'Speed'],
-    accent: 'emerald',
-  },
-  {
     id: 'mn',
+    industry: 'B2B & Advisory',
+    business: 'Corporate Advisory',
     name: 'MN Consultants',
+    description: 'Enterprise advisory and corporate services site focused on authority.',
+    variant: 'Live Site',
     url: 'https://mnconsultants.in/',
-    type: 'Enterprise Advisory & Corporate Services',
-    focus:
-      'Authority positioning, clear service taxonomy and structured B2B inquiry funnels.',
-    tags: ['B2B', 'Corporate Web', 'Lead Generation'],
+    features: ['Authority positioning', 'Clear service taxonomy', 'Structured B2B inquiry funnels'],
+    stack: ['B2B', 'Corporate Web', 'Lead Generation'],
     accent: 'cyan',
   },
 ]

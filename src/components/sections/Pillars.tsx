@@ -2,7 +2,7 @@ import { pillars } from '../../data/services'
 
 export default function Pillars() {
   return (
-    <section id="strategy" className="mx-auto max-w-6xl px-5 py-24">
+    <section id="strategy" className="mx-auto max-w-6xl scroll-mt-16 px-4 sm:px-5 py-24">
       <h2 data-reveal className="max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
         Most business websites are static digital brochures that leak revenue. I design interactive customer
         journeys built for one thing:{' '}

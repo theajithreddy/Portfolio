@@ -12,14 +12,14 @@ export default function Hero() {
   const use3D = tier === 'mid' || tier === 'high'
 
   return (
-    <section id="top" className="relative isolate flex min-h-screen items-center overflow-hidden">
+    <section id="overview" className="relative isolate flex min-h-screen items-center overflow-hidden">
       <HeroFallback />
       {use3D && tier && (
         <Suspense fallback={null}>
           <HeroScene tier={tier} />
         </Suspense>
       )}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050505]" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0a0c]" />
 
       <div className="relative mx-auto w-full max-w-6xl px-5 pt-24 pb-16">
         <p data-reveal className="mb-4 text-xs font-medium tracking-[0.25em] text-emerald-400 uppercase">

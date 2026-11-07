@@ -2,7 +2,7 @@ import { tiers } from '../../data/services'
 
 export default function Services() {
   return (
-    <section id="services" className="mx-auto max-w-6xl px-5 py-24">
+    <section id="services" className="mx-auto max-w-6xl scroll-mt-16 px-4 sm:px-5 py-24">
       <p data-reveal className="text-xs tracking-[0.25em] text-emerald-400 uppercase">Services</p>
       <h2 data-reveal className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Pick your starting point</h2>
       <div className="mt-12 grid gap-5 md:grid-cols-3">
