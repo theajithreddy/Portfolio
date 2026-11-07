@@ -9,7 +9,7 @@ export const contact = {
   instagram: 'https://instagram.com/theajithreddy',
   facebook: 'https://facebook.com/theajithreddy',
   x: 'https://x.com/theajithreddy_',
-  location: 'Warangal & Hyderabad',
+  location: 'Based in Warangal · Working remotely',
 } as const
 
 export const isContactConfigured = !contact.whatsappNumber.includes('X')
