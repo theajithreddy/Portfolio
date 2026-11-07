@@ -78,7 +78,7 @@ export default function ProjectEstimator() {
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
           <p className="text-sm text-zinc-400">
-            {tier.name}{picked.length > 0 ? ` + ${picked.length} add-on${picked.length > 1 ? 's' : ''}` : ''}. I'll reply with a scoped quote.
+            {tier.name}{picked.length > 0 ? ` + ${picked.length} add-on${picked.length > 1 ? 's' : ''}` : ''}. I'll reply with a scoped quote. A 40% advance starts the work.
           </p>
           <a
             href={waLink(message)}

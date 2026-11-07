@@ -13,6 +13,9 @@ export default function Services() {
           </div>
         ))}
       </div>
+      <p data-reveal className="mt-6 text-sm text-zinc-400">
+        A 40% advance is taken to start any service.
+      </p>
     </section>
   )
 }

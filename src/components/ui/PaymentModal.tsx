@@ -104,7 +104,7 @@ export function PaymentProvider({ children }: { children: ReactNode }) {
               <CreditCard className="text-emerald-400" size={20} /> Make a payment
             </h2>
             <p className="mt-2 text-sm text-zinc-400">
-              Pay advances, retainers or milestone fees securely with UPI, NetBanking or card.
+              A 40% advance is taken to start any service. Pay it securely with UPI, NetBanking or card.
             </p>
 
             {status === 'paid' ? (
