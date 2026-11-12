@@ -2,11 +2,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 
-// GitHub Pages base path:
-//  - user site repo `theajithreddy.github.io` -> '/'
-//  - project repo `theajithreddy/Portfolio`   -> '/Portfolio/' (current default)
-// Override at build time: VITE_BASE=/ npm run build
-const base = process.env.VITE_BASE ?? '/Portfolio/'
+// Production: https://theajithreddy.in (root domain) -> '/'
+// Override only for a sub-path host, e.g. GitHub Pages: VITE_BASE=/Portfolio/ npm run build
+const base = process.env.VITE_BASE ?? '/'
 
 export default defineConfig({
   base,
